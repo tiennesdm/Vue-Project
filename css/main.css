@@ -12,6 +12,10 @@ body {
 .slider .slides li .btn {
     margin-top: 2.5em;
 }
+.slider .slides li h3 {
+    margin-top: 1.5em;
+}
+
 /*search rules */
 .section-search input {
     padding: 10px !important;
@@ -28,4 +32,11 @@ body {
 /*features rules */
 .feature .row > div {
     margin-top: 2.2em;
+}
+/*social media section */
+.section-social .fa-4x {
+    margin: 4px 13px;
+}
+.section-social .fa-4x:hover {
+    color: #06bda7 !important;
 }
