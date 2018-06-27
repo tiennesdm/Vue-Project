@@ -40,3 +40,15 @@ body {
 .section-social .fa-4x:hover {
     color: #06bda7 !important;
 }
+/*section contact */
+.section-contact h5 {
+    margin-bottom: 2em;
+}
+
+/*footer copyright */
+.footer-copyright {
+    padding: 2em;
+}
+.footer-copyright span {
+    font-size: 1.2rem;
+}

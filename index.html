@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="css/main.css">
     <title>First project</title>
 </head>
-<body>
+<body id="home" class="scrollspy">
 
 <!--start navbar-->
 <div class="navbar-fixed">
@@ -28,10 +28,10 @@
                 </a>
 
                 <ul class="right hide-on-med-and-down">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#search">search</a></li>
-                    <li><a href="#popular">Popular Places</a></li>
-                    <li><a href="#gallary">Gallary</a></li>
+                    <li class="home active "><a href="#home">Home</a></li>
+                    <li class="search"><a href="#search">search</a></li>
+                    <li class="popular"><a href="#popular">Popular Places</a></li>
+                    <li class="gallary"><a href="#gallary">Gallary</a></li>
                 </ul>
             </div>
         </div>
@@ -73,7 +73,7 @@
         </li>
         <li>
             <img src="img/daylight-holidays-hotel-261156.jpg"> <!-- random image -->
-            <div class="caption right-align">
+            <div class="caption left-align">
                 <h3>we &amp; and you together! </h3>
                 <h5 class="light grey-text text-lighten-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                     Aliquam distinctio eos in magnam natus porro?</h5>
@@ -87,7 +87,7 @@
 
 <!--end hero area-->
 <!--search -->
-<section class="section-search section teal center white-text">
+<section id="search" class="section-search section teal center white-text scrollspy">
     <div class="row">
         <div class="container">
             <div class="col s12">
@@ -133,7 +133,7 @@
 <!--end features-->
 
 <!--start section popular places & Gallary-->
-<section class="section section-popular">
+<section id="popular" class="section section-popular scrollspy">
     <div class="container">
         <div class="row">
             <div class="col s12 m4">
@@ -212,7 +212,7 @@
 </section>
 <!--end social media -->
 <!--start photo gallary-->
-<section class="section-gallary ">
+<section id="gallary" class="section-gallary scrollspy">
     <div class="container ">
         <h4 class="center">
             <span class="teal-text">Photo</span> Gallary
@@ -261,8 +261,73 @@
         </div>
     </div>
 </section>
+<!--end photo gallary -->
+<!--start contact us -->
+<section id="contact" class="section section-contact scrollspy">
+    <div class="container">
+        <div class="row">
+            <div class="col m6">
+                <div class="card-panel teal center white-text">
+                    <i class="material-icons large"> email</i>
+                    <h4>Contact us for booking</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab illo ipsa minima numquam repellat
+                        voluptatibus?</p>
+                    <ul class="collection with-header left-align blue-grey-text">
+                        <li class="collection-header"><h4>Address</h4></li>
+                        <li class="collection-item">TravelVille Agency</li>
+                        <li class="collection-item">555 beach rd,Suite 33</li>
+                        <li class="collection-item">Maimi FL, 55555</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col m6 s12">
+                <div class="card-panel grey lighten-3">
+                    <h5>Please fill in this form.</h5>
+                    <div class="input-field">
+                        <input type="text" placeholder="Name" id="name">
+                        <label for="name">Name</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="email" placeholder="email" id="email">
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="text" placeholder="phone" id="phone">
+                        <label for="phone">Phone</label>
+                    </div>
+                    <div class="input-field">
+                        <textarea class="materialize-textarea" id="textarea1" placeholder="Enter Message."></textarea>
+                        <label for="textarea1">Textarea</label>
+                    </div>
+                    <input type="submit" value="submit" class="btn ">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!--end contact section -->
+<!--start footer -->
+
+<!--<footer class="page-footer teal">-->
+    <!--<div class="container">-->
+        <!--<div class="row">-->
+        <!--</div>-->
+    <!--</div>-->
+    <div class="footer-copyright center teal white-text">
+        <div class="container">
+            <span>© 2014 Copyright Text</span>
+        </div>
+    </div>
+<!--</footer>-->
+
+
+
+<!--end footer-->
+
 
 <!--jquery file-->
+
 <script src="js/jquery.min-1.11.js"></script>
 <!--materialize js file-->
 <script src="js/materialize.min.js"></script>
