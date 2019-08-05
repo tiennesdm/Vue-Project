@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--materialize css file-->
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <!--font awesome-->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css">
+    <!--my main css file-->
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <title>My Junk Price</title>
+</head>
+
+<body>
+    <div id="app">
+        <div class="navbar-fixed">
+            <nav>
+                <div class="nav-wrapper purple">
+                    <div class="container">
+                        <a href="#!" class="brand-logo">My Junk Price</a>
+                        <a href="#" data-activates="mobile-demo" class="button-collapse">
+                            <i class="material-icons">menu</i>
+                        </a>
+                        <div v-if="arr.length>0">
+                            <ul class="right hide-on-med-and-down">
+                                <li class="home" v-for="ur in arr"><a :href="ur.url">{{ur.name}}</a></li>
+                                <!----   <li class="search"><a href="#search">search</a></li>
+                                <li class="popular"><a href="#popular">Popular Places</a></li>
+                                <li class="gallary"><a href="#gallary">Gallary</a></li> -->
+                            </ul>
+
+                        </div>
+
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <!--end navbar-->
+        <!-- mobile menu-->
+        <ul class="side-nav" id="mobile-demo">
+            <li v-for="ur in arr"><a :href="ur.url">{{ur.name}}</a></li>
+            <!---   <li><a href="#search">search</a></li>
+            <li><a href="#popular">Popular Places</a></li>
+            <li><a href="#gallary">Gallary</a></li> --->
+        </ul>
+
+    </div>
+    <section>
+        <div id="carousel">
+            <div class="carousel carousel-slider center">
+                <div class="carousel-fixed-item center">
+                    <a class="btn waves-effect purple  darken-text-2">Know More</a>
+                </div>
+                <div v-if="arr1.length>0">
+                    <div v-for="ar in arr1">
+                        <div class="carousel-item" :href="ar.href">
+                            <img class="" :src="ar.url">
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col s12">
+                    <center>
+                        <h4>
+                            What is Lorem Ipsum?
+                        </h4>
+                    </center>
+                    <div>
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has
+                            survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more
+                            recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsu
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="gallerycard">
+        <div class="container">
+            <div class="row">
+                <div v-if="gallerycard.length>0">
+                    <div v-for="gallary in gallerycard">
+                        <div class="col s6 m4">
+                            <div class="card">
+                                <div class="card-image">
+                                    <img :src="gallary.img1">
+                                    <span class="card-title">{{gallary.title}}</span>
+                                </div>
+                                <div class="card-content">
+                                    <p>{{gallary.description}}</p>
+
+                                </div>
+                                <div class="card-action">
+                                    <a :href="gallary.link">{{gallary.cardAction}}</a> &nbsp;&nbsp;
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+    <!---footer-->
+    <footer class="page-footer purple">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Footer Content</h5>
+                    <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Links</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2014 Copyright Text
+                <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+        </div>
+    </footer>
+    <!--------->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/vue.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <!--my main js file-->
+    <script src="js/main.js"></script>
+
+
+</body>
+
+</html>
